@@ -61,12 +61,43 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.marked-terminal">module marked-terminal</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.marked-terminal.marked-terminal">
+            function <span class="apidocSignatureSpan"></span>marked-terminal
+            <span class="apidocSignatureSpan">(options, highlightOptions)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.marked-terminal" id="apidoc.module.marked-terminal">module marked-terminal</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.marked-terminal.marked-terminal" id="apidoc.element.marked-terminal.marked-terminal">
+        function <span class="apidocSignatureSpan"></span>marked-terminal
+        <span class="apidocSignatureSpan">(options, highlightOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Renderer(options, highlightOptions) {
+  this.o = assign({}, defaultOptions, options);
+  this.tab = sanitizeTab(this.o.tab, defaultOptions.tab);
+  this.tableSettings = this.o.tableOptions;
+  this.emoji = this.o.emoji ? insertEmojis : identity;
+  this.unescape = this.o.unescape ? unescapeEntities : identity;
+  this.highlightOptions = highlightOptions || {};
+
+  this.transform = compose(undoColon, this.unescape, this.emoji);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
